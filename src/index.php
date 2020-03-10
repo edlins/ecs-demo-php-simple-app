@@ -21,7 +21,7 @@
                 <p>The container is running PHP version <?php echo phpversion(); ?>.</p>
                 <?php
                         $ip_server = $_SERVER['SERVER_ADDR']; 
-                        echo "Server IP Address is: $ip_server"; 
+                        echo "Server IP Address is: $ip_server\n"; 
                         $myfile = fopen("/var/www/my-vol/date", "r") or die("");
                         echo fread($myfile,filesize("/var/www/my-vol/date"));
                         fclose($myfile);
