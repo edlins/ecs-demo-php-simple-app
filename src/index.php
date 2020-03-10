@@ -19,9 +19,8 @@
                 <h2>Congratulations</h2>
                 <p>Your PHP application is now running on a container in Amazon ECS.</p>
                 <p>The container is running PHP version <?php echo phpversion(); ?>.</p>
+                <p>The server IP address is <?php echo $_['SERVER_ADDR']; ?>.</p>
                 <?php
-                        $ip_server = $_SERVER['SERVER_ADDR']; 
-                        echo "Server IP Address is: $ip_server\n"; 
                         $myfile = fopen("/var/www/my-vol/date", "r") or die("");
                         echo fread($myfile,filesize("/var/www/my-vol/date"));
                         fclose($myfile);
